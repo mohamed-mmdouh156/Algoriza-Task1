@@ -209,7 +209,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         textColor: ColorManager.white,
                       ),
                       const SizedBox(
-                        height: AppSize.s22,
+                        height: AppSize.s16,
                       ),
                       Row(
                         children: [
@@ -238,11 +238,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: AppSize.s22,
+                        height: AppSize.s16
+                        ,
                       ),
                       OutLineButton(onClick: (){}),
                       const SizedBox(
-                        height: AppSize.s20,
+                        height: AppSize.s12,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -269,7 +270,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ],
                       ),
                       const SizedBox(
-                        height: AppSize.s20,
+                        height: AppSize.s8,
                       ),
                       Align(
                         alignment: AlignmentDirectional.centerStart,

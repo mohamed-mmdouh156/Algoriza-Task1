@@ -37,7 +37,7 @@ class OnBoardingItem extends StatelessWidget {
             title,
             style: getMediumStyle(
               color: ColorManager.black,
-              fontSize: AppSize.s30,
+              fontSize: AppSize.s26,
             ),
             textAlign: TextAlign.center,
           ),
