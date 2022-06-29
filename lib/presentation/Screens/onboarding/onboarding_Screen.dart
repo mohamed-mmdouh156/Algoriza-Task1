@@ -1,6 +1,7 @@
 import 'package:algoriza_task1/presentation/Screens/onboarding/onboarding_item.dart';
 import 'package:algoriza_task1/presentation/resources/color_manager.dart';
 import 'package:algoriza_task1/presentation/resources/font_manager.dart';
+import 'package:algoriza_task1/presentation/resources/route_manager.dart';
 import 'package:algoriza_task1/presentation/resources/string_manager.dart';
 import 'package:algoriza_task1/presentation/resources/style_manager.dart';
 import 'package:algoriza_task1/presentation/resources/value_manager.dart';
@@ -27,7 +28,9 @@ class OnBoardingScreen extends StatelessWidget {
               Align(
                 alignment: AlignmentDirectional.centerEnd,
                 child: Button2(
-                  onClick: (){},
+                  onClick: (){
+                    Navigator.pushNamed(context, RoutesManager.loginRoute);
+                  },
                   buttonColor: ColorManager.lightYellow,
                   text: AppStrings.skip,
                   textColor: ColorManager.black,
@@ -79,7 +82,9 @@ class OnBoardingScreen extends StatelessWidget {
                 text: AppStrings.getStarted,
                 buttonColor: ColorManager.teal,
                 textColor: ColorManager.white,
-                onClick: (){},
+                onClick: (){
+                  Navigator.pushNamed(context, RoutesManager.loginRoute);
+                },
               ),
               const SizedBox(
                 height: AppSize.s20,
@@ -95,7 +100,9 @@ class OnBoardingScreen extends StatelessWidget {
                     ),
                   ),
                   TextButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.pushNamed(context, RoutesManager.registerRoute);
+                    },
                     child: Text(
                     AppStrings.signUp,
                     style: getRegularStyle(

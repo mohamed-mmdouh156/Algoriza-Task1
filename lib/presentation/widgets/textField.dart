@@ -8,19 +8,19 @@ class InputTextField extends StatelessWidget {
   final TextEditingController textController ;
   final String hintText ;
   final TextInputType inputType;
-  final bool isPassword;
+  final String validator;
   
   const InputTextField({
     Key? key,
     required this.textController,
     this.hintText = 'Eg. 812345678',
     required this.inputType,
-    required this.isPassword,
+    required this.validator,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return  TextFormField(
+    return TextFormField(
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: getRegularStyle(
@@ -28,11 +28,18 @@ class InputTextField extends StatelessWidget {
           fontSize: FontSize.s16,
         ),
         border: const OutlineInputBorder(),
-        suffix: isPassword == true ? const Icon(Icons.visibility) : null,
       ),
       controller: textController,
       keyboardType: inputType,
-      obscureText: isPassword,
+      validator: (value){
+        if(value!.isEmpty)
+          {
+            return validator;
+          }
+        else{
+          return null;
+        }
+      },
     );
   }
 }

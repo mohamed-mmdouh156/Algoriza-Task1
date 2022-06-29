@@ -34,6 +34,14 @@ class PhoneTextField extends StatelessWidget {
       ),
       keyboardType: TextInputType.phone,
       controller: textController,
+      validator: (value){
+        if(value!.isEmpty){
+          return 'Phone must not Empty';
+        }
+        else{
+          return null;
+        }
+      },
     );
   }
 }
